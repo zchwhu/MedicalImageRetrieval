@@ -1,0 +1,350 @@
+#wrapper{
+    min-width: 1520px;
+}
+
+nav{
+    width: 100%;
+}
+
+nav>div{
+    width: 70%;
+}
+
+#search-control{
+    /*margin-top: 60px;*/
+    padding: 10px;
+    position: fixed;
+    top: 51px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+#typeSelect{
+    overflow: hidden;
+    margin: 20px auto;
+    width: 70%;
+}
+
+#typeSelect .checkbox input[type="checkbox"]{
+    margin-left: 0;
+    opacity: 0;
+}
+
+#typeSelect .checkbox{
+    margin-top: 0;
+    /*padding-left: 10px;*/
+}
+
+#typeSelect .checkbox label{
+    padding-left: 5px;
+    position: relative;
+}
+
+#typeSelect .checkbox label:before{
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #f3f3f3;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    left: 0;
+    margin-left: -20px;
+    position: absolute;
+    transition: border 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s;
+    width: 20px;
+}
+
+#typeSelect #Composite.checkbox input[type="checkbox"]:checked+label:before{
+    background-color: #ADAFAF;
+    border-color: #ADAFAF;
+}
+
+#typeSelect #Equation.checkbox input[type="checkbox"]:checked+label:before{
+    background-color: #5BC0DE;
+    border-color: #5BC0DE;
+}
+
+#typeSelect #Diagram.checkbox input[type="checkbox"]:checked+label:before{
+    background-color: #D9534F;
+    border-color: #D9534F;
+}
+
+#typeSelect #Photo.checkbox input[type="checkbox"]:checked+label:before{
+    background-color: #F2B967;
+    border-color: #F2B967;
+}
+
+#typeSelect #Plot.checkbox input[type="checkbox"]:checked+label:before{
+    background-color: #428BCA;
+    border-color: #428BCA;
+}
+
+#typeSelect #Table.checkbox input[type="checkbox"]:checked+label:before{
+    background-color: #5CB85C;
+    border-color: #5CB85C;
+}
+
+input[type="checkbox"]:checked+label:after{
+    content: "¡Ì";
+    color: #555555;
+    display: inline-block;
+    font-size: 11px;
+    height: 16px;
+    left: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: "¡Ì";
+    font-family: "FontAwesome";
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#imagestyle{
+    margin-top: 5px;
+}
+
+#imagestyle img{
+    margin-left: 5px;
+    padding: 2px;
+}
+
+#imagestyle img.selected{
+    border: 1px solid #080808;
+    border-radius: 3px;
+}
+
+#slider{
+    margin-top: 11px;
+}
+
+#content{
+    height:70%;
+    /*overflow-y:scroll;*/
+    overflow-x: hidden;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 165px;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+#content img{
+    border: 5px solid #CCCCCC;
+    border-radius: 3px;
+    max-width: 100%;
+}
+
+#content #mainContent img{
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+    margin: 2px;
+    transition: transform 0.6s ease-in-out;
+}
+
+#mainContent img:hover{
+    transform: scale(1.2,1.2);
+}
+
+#content .Composite{
+    border: 5px solid #ADAFAF;
+}
+
+#content .Equation{
+    border: 5px solid #5BC0DE;
+}
+
+#content .Diagram{
+    border: 5px solid #D9534F;
+}
+
+#content .Photo{
+    border: 5px solid #F2B967;
+}
+
+#content .Plot{
+    border: 5px solid #428BCA;
+}
+
+#content .Table{
+    border: 5px solid #5CB85C;
+}
+
+#imageList ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+#imageList ul .paperList{
+    border: 2px solid #CCCCCC;
+    border-radius: 10px;
+    padding: 25px 10px 10px;
+    margin-bottom: 10px;
+}
+
+#imageList ul .paperList .paperTitle{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+#imageList ul .paperList .paperAuthor{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#imageList ul .paperList .paperImage{
+    margin-top: 5px;
+}
+
+#paperDetail{
+    width: 90%;
+    border: 5px solid #CCCCCC;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px 100px;
+    position: relative;
+}
+
+#paperDetail #close{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#paperDetail .paperTitle{
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#paperDetail .paperAuthor{
+    font-size: 12px;
+    height: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 18px;
+    margin: 4px 0;
+    color: #333333;
+}
+
+#paperDetail .paperJournal{
+    font-style: italic;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 18px;
+    height: 18px;
+    margin: 4px 0;
+    color: #333333;
+    font-size: 12px;
+}
+
+#paperDetail h5{
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+#paperDetail .paperAbstractDetail{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    color: #333333;
+    text-align: justify;
+}
+
+#paperDetail .moreInfo{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#paperDetail .moreInfo span{
+    color: blue;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#paperDetail .moreInfo span a{
+    color: blue;
+    text-decoration: none;
+}
+
+#paperDetail #taggerArea{
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#paperDetail #selectedImage{
+    border: none;
+}
+
+#paperDetail .imageIntroduction{
+    font-size: 13px;
+    color: #333333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 5px;
+    text-align: justify;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#paperDetail #otherImage{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EFEFEF;
+
+}
+
+#paperDetail #otherImage h4{
+    padding: 20px 0;
+}
+
+#paperDetail #otherImage img{
+    height: 100px;
+    width: auto;
+    margin-bottom: 4px;
+}
+
+#paperDetail #relatedImage{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#paperDetail #relatedImage h4{
+    padding:20px 0;
+}
+
+#paperDetail #relatedImage img{
+    height: 100px;
+    width: auto;
+    margin-bottom: 4px;
+}
+
+#loading{
+    width:100%;
+    height: 35px;
+    background: url("../img/loading.gif") no-repeat center;
+    margin-top: 10px;
+}
+
+footer{
+    box-sizing: border-box;
+    height: 50px;
+    text-align: center;
+    padding: 10px auto;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+}

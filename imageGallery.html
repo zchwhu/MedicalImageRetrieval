@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片示例</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style/imageGallery.css" charset="gbk" type="text/css">
+    <link rel="stylesheet" href="style/d3.slider.css" type="text/css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">IRLAB</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Search</a>
+                        </li>
+                        <li>
+                            <a href="#">Crowdedsourcing</a>
+                        </li>
+                        <li>
+                            <a href="#">Statistics</a>
+                        </li>
+                        <li>
+                            <a href="#">Open Data</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="search-control">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default impact" id="orderMode">Impact</button>
+                        </span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Keywords or PMCID (e.g. PMC395763), Ordered by Impact">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">Search</button>
+                        </span>
+                    </div>
+                    <div id="typeSelect">
+                        <form>
+                            <div class="checkbox checkbox-inline" id="Composite">
+                                <input type="checkbox" id="checkbox1" checked="checked" name="imageType">
+                                <label for="checkbox1">Composite</label>
+                            </div>
+                            <div class="checkbox checkbox-inline" id="Equation">
+                                <input type="checkbox" id="checkbox2" checked="checked" name="imageType">
+                                <label for="checkbox2">Equation</label>
+                            </div>
+                            <div class="checkbox checkbox-inline" id="Diagram">
+                                <input type="checkbox" id="checkbox3" checked="checked" name="imageType">
+                                <label for="checkbox3">Diagram</label>
+                            </div>
+                            <div class="checkbox checkbox-inline" id="Photo">
+                                <input type="checkbox" id="checkbox4" checked="checked" name="imageType">
+                                <label for="checkbox4">Photo</label>
+                            </div>
+                            <div class="checkbox checkbox-inline" id="Plot">
+                                <input type="checkbox" id="checkbox5" checked="checked" name="imageType">
+                                <label for="checkbox5">Plot</label>
+                            </div>
+                            <div class="checkbox checkbox-inline" id="Table">
+                                <input type="checkbox" id="checkbox6" checked="checked" name="imageType">
+                                <label for="checkbox6">Table</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div id="slider" class="d3-slider d3-slider-horizontal col-lg-6"></div>
+                        <div id="imagestyle" class="col-lg-4">
+                            <img src="img/brick.png" class="selected">
+                            <img src="img/list.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <section id="mainContent">
+                <section id="waterfall">
+                    <!--瀑布流形式的图片列表，传入图片时需要指定图片类别,图片类别需要跟复选框的类名相同,下同-->
+                    <img src="img/1.jpg" class="Composite">
+                    <img src="img/2.jpg" class="Table">
+                    <img src="img/3.jpg" class="Plot">
+                    <img src="img/4.jpg" class="Photo">
+                    <img src="img/5.jpg" class="Equation">
+                    <img src="img/6.jpg" class="Diagram">
+                    <img src="img/7.jpg" class="Composite">
+                    <img src="img/8.jpg" class="Table">
+                    <img src="img/9.jpg" class="Plot">
+                    <img src="img/10.jpg" class="Diagram">
+                    <img src="img/1.jpg" class="Composite">
+                    <img src="img/2.jpg" class="Table">
+                    <img src="img/3.jpg" class="Plot">
+                    <img src="img/4.jpg" class="Photo">
+                    <img src="img/5.jpg" class="Equation">
+                    <img src="img/6.jpg" class="Diagram">
+                    <img src="img/7.jpg" class="Composite">
+                    <img src="img/8.jpg" class="Table">
+                    <img src="img/9.jpg" class="Plot">
+                    <img src="img/10.jpg" class="Diagram">
+                    <img src="img/1.jpg" class="Composite">
+                    <img src="img/2.jpg" class="Table">
+                    <img src="img/3.jpg" class="Plot">
+                    <img src="img/4.jpg" class="Photo">
+                    <img src="img/5.jpg" class="Equation">
+                    <img src="img/6.jpg" class="Diagram">
+                    <img src="img/7.jpg" class="Composite">
+                    <img src="img/8.jpg" class="Table">
+                    <img src="img/9.jpg" class="Plot">
+                    <img src="img/10.jpg" class="Diagram">
+                    <img src="img/1.jpg" class="Composite">
+                    <img src="img/2.jpg" class="Table">
+                    <img src="img/3.jpg" class="Plot">
+                    <img src="img/4.jpg" class="Photo">
+                    <img src="img/5.jpg" class="Equation">
+                    <img src="img/6.jpg" class="Diagram">
+                    <img src="img/7.jpg" class="Composite">
+                    <img src="img/8.jpg" class="Table">
+                    <img src="img/9.jpg" class="Plot">
+                    <img src="img/10.jpg" class="Diagram">
+                    <img src="img/1.jpg" class="Composite">
+                    <img src="img/2.jpg" class="Table">
+                    <img src="img/3.jpg" class="Plot">
+                    <img src="img/4.jpg" class="Photo">
+                    <img src="img/5.jpg" class="Equation">
+                    <img src="img/6.jpg" class="Diagram">
+                    <img src="img/7.jpg" class="Composite">
+                    <img src="img/8.jpg" class="Table">
+                    <img src="img/9.jpg" class="Plot">
+                    <img src="img/10.jpg" class="Diagram">
+                </section>
+                <section id="imageList" style="display: none">
+                    <!--图片列表形式，传入图片时需要指定图片类别，另外需要传入论文标题和作者信息-->
+                    <ul>
+                        <li class="paperList">
+                            <p class="paperTitle">The COG database: an updated version includes eukaryotes</p>
+                            <p class="paperAuthor">Natale Darren A, Yin Jodie J, Wolf Yuri I, Vasudevan Sona, Sverdlov Alexander V, Smirnov Sergei, Rao B Sridhar, Nikolskaya Anastasia N, Mekhedov Sergei L, Mazumder Raja, Krylov Dmitri M, Koonin Eugene V, Kiryutin Boris, Jacobs Aviva R, Jackson John D, Fedorova Natalie D and Tatusov Roman L</p>
+                            <div class="paperImage">
+                                <img src="img/1.jpg" class="Composite">
+                                <img src="img/2.jpg" class="Table">
+                                <img src="img/3.jpg" class="Plot">
+                                <img src="img/4.jpg" class="Photo">
+                                <img src="img/5.jpg" class="Equation">
+                            </div>
+                        </li>
+                        <li class="paperList">
+                            <p class="paperTitle">The COG database: an updated version includes eukaryotes</p>
+                            <p class="paperAuthor">Natale Darren A, Yin Jodie J, Wolf Yuri I, Vasudevan Sona, Sverdlov Alexander V, Smirnov Sergei, Rao B Sridhar, Nikolskaya Anastasia N, Mekhedov Sergei L, Mazumder Raja, Krylov Dmitri M, Koonin Eugene V, Kiryutin Boris, Jacobs Aviva R, Jackson John D, Fedorova Natalie D and Tatusov Roman L</p>
+                            <div class="paperImage">
+                                <img src="img/1.jpg" class="Composite">
+                                <img src="img/2.jpg" class="Table">
+                                <img src="img/3.jpg" class="Plot">
+                                <img src="img/4.jpg" class="Photo">
+                                <img src="img/5.jpg" class="Equation">
+                            </div>
+                        </li>
+                        <li class="paperList">
+                            <p class="paperTitle">The COG database: an updated version includes eukaryotes</p>
+                            <p class="paperAuthor">Natale Darren A, Yin Jodie J, Wolf Yuri I, Vasudevan Sona, Sverdlov Alexander V, Smirnov Sergei, Rao B Sridhar, Nikolskaya Anastasia N, Mekhedov Sergei L, Mazumder Raja, Krylov Dmitri M, Koonin Eugene V, Kiryutin Boris, Jacobs Aviva R, Jackson John D, Fedorova Natalie D and Tatusov Roman L</p>
+                            <div class="paperImage">
+                                <img src="img/1.jpg" class="Composite">
+                            </div>
+                        </li>
+                        <li class="paperList">
+                            <p class="paperTitle">The COG database: an updated version includes eukaryotes</p>
+                            <p class="paperAuthor">Natale Darren A, Yin Jodie J, Wolf Yuri I, Vasudevan Sona, Sverdlov Alexander V, Smirnov Sergei, Rao B Sridhar, Nikolskaya Anastasia N, Mekhedov Sergei L, Mazumder Raja, Krylov Dmitri M, Koonin Eugene V, Kiryutin Boris, Jacobs Aviva R, Jackson John D, Fedorova Natalie D and Tatusov Roman L</p>
+                            <div class="paperImage">
+                                <img src="img/3.jpg" class="Plot">
+                                <img src="img/4.jpg" class="Photo">
+                                <img src="img/5.jpg" class="Equation">
+                            </div>
+                        </li>
+                        <li class="paperList">
+                            <p class="paperTitle">The COG database: an updated version includes eukaryotes</p>
+                            <p class="paperAuthor">Natale Darren A, Yin Jodie J, Wolf Yuri I, Vasudevan Sona, Sverdlov Alexander V, Smirnov Sergei, Rao B Sridhar, Nikolskaya Anastasia N, Mekhedov Sergei L, Mazumder Raja, Krylov Dmitri M, Koonin Eugene V, Kiryutin Boris, Jacobs Aviva R, Jackson John D, Fedorova Natalie D and Tatusov Roman L</p>
+                            <div class="paperImage">
+                                <img src="img/1.jpg" class="Composite">
+                                <img src="img/2.jpg" class="Table">
+                                <img src="img/3.jpg" class="Plot">
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <p id="loading"></p>
+            </section>
+            <section id="paperDetail" style="display: none;">
+                <img src="img/close.png" id="close">
+                <!--论文标题，需要从后台传入-->
+                <p class="paperTitle">Apoptosis: A Basic Biological Phenomenon with Wide-ranging Implications in Tissue Kinetics</p>
+                <!--论文作者，需要从后台传入-->
+                <p class="paperAuthor">Currie A. R., Wyllie A. H. and Kerr J. F. R.</p>
+                <!--论文期刊，需要从后台传入-->
+                <p class="paperJournal">British Journal of Cancer 1972</p>
+                <div id="paperAbstract" style="display: none">
+                    <h5>Abstract</h5>
+                    <!--论文摘要，需要从后台传入-->
+                    <p class="paperAbstractDetail">The term apoptosis is proposed for a hitherto little recognized mechanism of controlled
+                        cell deletion, which appears to play a complementary but opposite role to mitosis in
+                        the regulation of animal cell populations. Its morphological features suggest that it
+                        is an active, inherently programmed phenomenon, and it has been shown that it can be
+                        initiated or inhibited by a variety of environmental stimuli, both physiological and
+                        pathological.The term apoptosis is proposed for a hitherto little recognized mechanism
+                        of controlled cell deletion, which appears to play a complementary but opposite role to
+                        mitosis in the regulation of animal cell populations. Its morphological features suggest
+                        that it is an active, inherently programmed phenomenon, and it has been shown that it can
+                        be initiated or inhibited by a variety of environmental stimuli, both physiological and
+                        pathological. The structural changes take place in two discrete stages. The first comprises
+                        nuclear and cytoplasmic condensation and breaking up of the cell into a number of membrane-bound,
+                        ultrastructurally well-preserved fragments. In the second stage these apoptotic bodies are shed
+                        from epithelial-lined surfaces or are taken up by other cells, where they undergo a series of
+                        changes resembling The structural changes take place in two discrete stages. The first comprises
+                        nuclear and cytoplasmic condensation and breaking up of the cell into a number of membrane-bound,
+                        ultrastructurally well-preserved fragments. In the second stage these apoptotic bodies are shed
+                        from epithelial-lined surfaces or are taken up by other cells, where they undergo a series of
+                        changes resembling in vitroin vitro autolysis within phagosomes, and are rapidly degraded by l
+                        ysosomal enzymes derived from the ingesting cells. Apoptosis seems to be involved in cell
+                        turnover in many healthy adult tissues and is responsible for focal elimination of cells
+                        during normal embryonic development. It occurs spontaneously in untreated malignant neoplasms,
+                        and participates in at least some types of therapeutically induced tumour regression. It is
+                        implicated in both physiological involution and atrophy of various tissues and organs. It can
+                        also be triggered by noxious agents, both in the embryo and adult animal.Apoptosis seems to be
+                        involved in cell turnover in many healthy adult tissues and is responsible for focal elimination
+                        of cells during normal embryonic development. It occurs spontaneously in untreated malignant
+                        neoplasms, and participates in at least some types of therapeutically induced tumour regression.
+                        It is implicated in both physiological involution and atrophy of various tissues and organs. It can
+                        also be triggered by noxious agents, both in the embryo and adult animal. ImagesImagesFig. 8-10Fig.
+                        8-10Fig. 1Fig. 1Fig. 2Fig. 2Fig. 3Fig. 3Fig. 4Fig. 4Fig. 6Fig. 6Fig. 7Fig. 7Fig. 11-14Fig. 11-14Fig.
+                        15-18Fig. 15-18Fig. 19Fig. 19Fig. 20-22Fig. 20-22Fig. 23 and 24Fig. 23 and 24
+                    </p>
+                </div>
+                <!--论文全文需要获取路径名赋给View Paper的href属性-->
+                <div class="moreInfo">
+                    |<span id="viewAbstract"> View Abstract </span>|<span> <a href="http://localhost:63342/imageGallery/web/viewer.html?file=../doc/totalrecall.pdf" target="_blank" id="viewFullPaper">View Paper</a> </span>|<span> View Cluster </span>|
+                </div>
+                <div id="taggerArea">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" aria-label="..." placeholder="Tag keywords on this figure (e.g. genetics, metabolism) and verify the figure type >>>">
+                            <div class="input-group-btn">
+                                <button id="taggerType" type="submit" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <ul class="dropdown-menu dropdown-menu-right" id="taggerSelected">
+                                    <li><a href="#">Table</a></li>
+                                    <li><a href="#">Composite</a></li>
+                                    <li><a href="#">Photo</a></li>
+                                    <li><a href="#">Plot</a></li>
+                                    <li><a href="#">Equation</a></li>
+                                    <li><a href="#">Diagram</a></li>
+                                </ul>
+                                <button class="btn btn-default" id="taggerSubmit">Taggit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--被点击的图片-->
+                <img id="selectedImage">
+                <!--图片介绍,需要从后台传入-->
+                <p class="imageIntroduction">
+                    Example PhyoChip analysis performed using PhlyoTrac and Fast UniFrac. (A) Exporting the environment file from PhyloTrac, (B) uploading to Fast UniFrac, (C) viewing weighted Fast UniFrac PCoA results in the web interface directly (in this display, each point is a sample, and we see a 2D projection of the first two principal coordinates obtained by PCoA; the relatively smooth curve suggests that there is a gradient connecting the samples), (D) viewing unweighted Fast UniFrac ordination results in the linked 3D viewer: again, each point is a sample and the distances are calculated by PCoA of the UniFrac distances, but in this case three dimensions are shown, and (E) a scree plot showing how much of the variation is explained singly or cumulatively by each of the first 10 principal coordinates, allowing the user to see that, for example, the first three principal coordinates together explain over 80% of the variance in the samples. As reported in the original study, no clear patterns are readily seen using ordination, but demonstrates the speed and ease with which this sort analysis can now be performed.
+                </p>
+                <div class="moreInfo" style="border-bottom: none">
+                    |<span id="showOtherImage"> Show Other Figures </span>|<span id="showRelatedImage"> Show Related Figures </span>|
+                </div>
+                <!--与该图片出现在同一篇论文中的图片,需要从后台传入-->
+                <div id="otherImage" style="display: none">
+                    <h4>Other Figures in This Paper</h4>
+                    <img src="img/1.jpg" class="Composite">
+                    <img src="img/2.jpg" class="Table">
+                    <img src="img/3.jpg" class="Plot">
+                    <img src="img/4.jpg" class="Photo">
+                </div>
+                <!--与该图片相关的图片.需要从后台传入-->
+                <div id="relatedImage" style="display: none">
+                    <h4>Recommended Figures Related to This Papers</h4>
+                    <img src="img/6.jpg" class="Diagram">
+                    <img src="img/7.jpg" class="Composite">
+                    <img src="img/8.jpg" class="Table">
+                    <img src="img/9.jpg" class="Plot">
+                    <img src="img/10.jpg" class="Diagram">
+                    <img src="img/1.jpg" class="Composite">
+                </div>
+            </section>
+        </section>
+        <footer>
+            A project of the <a href="http://ir.whu.edu.cn">IRLAB</a> at the <a href="http://sim.whu.edu.cn">School of Information Management,Wuhan University</a>
+        </footer>
+    </div>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="script/d3.slider.js" type="text/javascript"></script>
+    <script src="script/imageGallery.js" type="text/javascript" charset="gbk"></script>
+</body>
+</html>
